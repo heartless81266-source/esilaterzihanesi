@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fcfcfd;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* --- Kapak Alanı ve Başlıklar --- */
+.baslikk {
+    background-image: url('kapak.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 520px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ablem {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 60px;
+    height: auto;
+    z-index: 10;
+}
+
+/* Sağ Üst Menü */
+.menug {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: flex;
+    gap: 12px;
+    z-index: 20;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2b2b2b;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+
+/* Ortalanan Kapak Başlıkları */
+.kapak-yazilari {
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2px);
+    transform: translateY(-50px);
+}
+
+.ana-baslik {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin: 0 0 6px 0;
+    letter-spacing: 1px;
+}
+
+.alt-baslik {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #444444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    max-width: fit-content;
+}
+
+/* --- Slogan Alanı --- */
+.her {
+    background-image: url('resim5.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 110px;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    color: #222;
+    padding: 10px 20px;
+}
+
+/* --- Fotoğraf Galerisi --- */
+.gallerry {
+    display: flex;
+    width: 90%;
+    max-width: 1100px;
+    height: 380px;
+    gap: 12px;
+    margin: 40px auto;
+    user-select: none;
+}
+
+.panel {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    cursor: pointer;
+    filter: grayscale(70%);
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+}
+
+.p1 { background-image: url('res1.jpg'); }
+.p2 { background-image: url('res2.jpg'); }
+.p3 { background-image: url('res3.jpg'); }
+.p6 { background-image: url('res6.jpg'); }
+
+.panel:hover {
+    flex: 3.5;
+    filter: grayscale(0%);
+}
+
+/* --- Video ve Hakkında Bölümü --- */
+.res {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.res video {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.yaziyazi {
+    flex: 1;
+    min-width: 300px;
+}
+
+.terzihanehak {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.paragraf {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4a4a4a;
+    text-align: justify;
+    scroll-margin-top: 50px;
+}
+
+/* --- Hizmet Şeridi --- */
+.hzmt {
+   /* Ana Çerçeve ve Arka Plan */
+.hizmetler-alani {
+    background-color: #f6efe6;
+    border: 1.5px solid #d4c2b2;
+    border-radius: 12px;
+    padding: 30px 25px 35px 25px; /* Üst boşluk azaltılarak içerik yukarı çekildi */
+  width: 100%; max-width: 100%;
+    font-family: 'Playfair Display', serif;
+    color: #433027;
+    box-shadow: inset 0 0 0 5px #f6efe6, inset 0 0 0 6px #e6d7c8;
+}
+
+/* Üst Başlık */
+.hizmet-baslik-kapsayici {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px; /* Başlık ile alt yazılar arasındaki mesafe daraltıldı */
+}
+
+.baslik-cizgi {
+    flex: 1;
+    height: 1px;
+    background-color: #5a4237;
+    max-width: 280px;
+}
+
+.baslik-icerik {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hizmet-ana-baslik {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #433027;
+    margin: 0;
+}
+
+.baslik-kalp {
+    font-size: 14px;
+    color: #5a4237;
+}
+
+/* Kolonlar ve Kart Yapısı */
+.hizmetler-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: -5px; /* Yazıları biraz daha yukarı kaldırmak için */
+}
+
+.hizmet-karti {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+    position: relative;
+    border-right: 1px solid #d9c8ba;
+}
+
+/* Dikey çizginin ortasındaki elmas simgesi */
+.hizmet-karti::after {
+    content: '';
+    position: absolute;
+    right: -4.5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    background-color: #8c7365;
+}
+
+.hizmet-karti.son {
+    border-right: none;
+}
+
+.hizmet-karti.son::after {
+    display: none;
+}
+
+/* Kart Başlıkları (Yukarı Hizalı) */
+.hizmet-baslik {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #3b2820;
+    margin: 0 0 10px 0;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Kart Açıklamaları */
+.hizmet-aciklama {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #634d42;
+    margin: 0 0 18px 0;
+    flex-grow: 1;
+    max-width: 170px;
+}
+
+/* Alt Çizgi ve Kalp */
+.alt-cizgi-kalp {
+    position: relative;
+    width: 50px;
+    height: 1px;
+    background-color: #8c7365;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.alt-cizgi-kalp span {
+    background-color: #f6efe6;
+    padding: 0 5px;
+    font-size: 11px;
+    color: #5a4237;
+    transform: translateY(-1px);
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 992px) {
+    .hizmetler-grid {
+        flex-wrap: wrap;
+        gap: 25px 0;
+    }
+
+    .hizmet-karti {
+        flex: 0 0 50%;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+
+    .hizmet-karti::after {
+        display: none;
+    }
+
+    .hizmet-baslik-kapsayici {
+        flex-direction: column;
+    }
+
+    .baslik-cizgi {
+        display: none;
+    }
+}
+
+}
+
+/* --- Footer --- */
+.elisa-footer {
+    background-color: #161616;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #a0a0a0;
+}
+
+.footer-baslik {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.footer-sosyal {
+    display: flex;
+    gap: 15px;
+}
+
+.sosyal-buton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(R.jpg);
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s;
+     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sosyall-buton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(n.webp);
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sosyal-buton:hover {
+    background-color: #444444;
+}
+
+/* En Alttaki Bilgi Metinleri */
+.footer-alt-yazilar {
+    text-align: center;
+    max-width: 500px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.telif-yazisi {
+    margin: 0 0 10px 0;
+}
+
+.tasarim-yazisi {
+    margin: 0;
+}
+
+
+
+
+.konum{
+    font-size: 15px;
+}
+
+/* --- Mobil Uyum (Responsive) --- */
+@media (max-width: 768px) {
+    /* Başlık alanındaki logo ve menünün üst üste binmesini önler */
+    .baslikk {
+        height: auto;
+        min-height: 420px;
+        /* Üst boşluk logonun ve menünün hizasına göre dengelendi */
+        padding: 90px 15px 35px;
+        flex-direction: column;
+    }
+
+    .amblem, .ablem {
+       top: 20px;
+        left: 20px;
+        right: auto;
+        transform: none; /* Ortalamayı iptal eder */
+        width: 50px;
+    }
+
+    .menug {
+        top: 25px;
+        right: 20px;
+        left: auto;
+        transform: none; /* Ortalamayı iptal eder */
+        width: auto;
+        gap: 8px;
+    }
+
+    .kapak-yazilari {
+        margin-top: 50px;
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .ana-baslik {
+        font-size: 2rem;
+    }
+
+    /* Mobilde galeri taşmasını önler */
+    .gallerry {
+        height: 220px;
+        width: 95%;
+        gap: 6px;
+        -webkit-touch-callout: none;
+    }
+
+    .panel:hover {
+        flex: 2;
+        /* Fare üzerine geldiğinde veya mobilde tıklandığında */
+.panel:hover,
+.panel.active {
+    flex: 3.5;
+    filter: grayscale(0%);
+} /* Mobilde aşırı genişleyip ekranı zorlamaz */
+    }
+
+    /* Hizmet kartlarının alt alta temiz görünümü */
+    .hizmet-karti {
+        flex: 0 0 100%;
+        border-right: none;
+        border-bottom: 1px dashed #d9c8ba;
+        padding-bottom: 25px;
+        margin-bottom: 20px;
+    }
+
+    .hizmet-karti::after {
+        display: none !important;
+    }
+
+    .hizmet-karti.son {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .menug .nav-link {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .kapak-yazilari {
+        margin-top: 30px;
+        transform: none;
+        width: 100%;
+        padding: 15px;
+    }
+    .ana-baslik {
+        font-size: 2rem;
+    }
+}
